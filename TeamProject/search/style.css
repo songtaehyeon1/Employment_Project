@@ -1,0 +1,529 @@
+@charset "UTF-8";
+	/* 모든 스타일 */
+	*{
+		font-size : 15px;
+		margin : 0;
+		padding : 0;
+	}
+	
+	.btn-primary, .btn-primary:link, .btn-primary:hover, .btn-primary:visited{
+		background-color : #3399FF;
+		border : 1px solid #3399FF;
+	}
+	
+	hr{
+		margin : 0;
+		padding : 0;
+	}
+	
+	/* a태그 */
+	a:hover, a:link, a:visited{
+		text-decoration : none;
+		color : black;
+	}
+	
+	a:hover{
+		color : gray;
+		cursor : pointer;
+	}
+
+	/* 맨 윗줄 로그인 */
+	#header{
+		width : 100%;
+		float : right;
+		height : 35px;
+	}
+	
+	#login{
+		float : right;
+	}
+	
+	#login>.btn-primary{
+		background : white;
+		color : #3399FF;
+	}
+	
+	#login>.btn-primary:hover{
+		background-color : #3399FF;
+		border-color : #3399FF;
+		color : #ffffff;
+	}
+	
+	/* 두번째 줄 검색창 */
+	#bar>div:nth-of-type(1){
+		width : 200px;
+		height : 80px;
+		float : left;
+		text-align : center;
+	}
+	
+	#bar>div:nth-of-type(1) a{
+		font-size : 50px;
+	}
+	
+	#bar{
+		width : 100%;
+		float : left;
+		height : 80px;
+		line-height : 80px;
+	}
+	
+	#bar *{
+		color : white;
+	}
+	
+	#search_bar>div{
+		float : left;
+		margin-left : 100px;
+	}
+	
+	#recruitment_search, #person_search, #project_search, #project_request{
+		float : left;
+	}
+	
+	#search_bar input{
+		width : 200px;
+		height : 40px;
+	}
+	
+	#search_button{
+		height : 40px;
+	}
+	
+	#search_button>img{
+		margin-top : -5px;
+	}
+	
+	#search_button, #search_button:hover, #search_button:focus{
+		background-color : white;
+		color : white;
+		border-color : #3399FF;
+	}
+	
+	#search{
+		padding : 20px;
+		width : 400px;
+	}
+	
+	#search input[type=text]{
+		width : 300px;
+		color : gray;
+	}
+	
+	#search_area div{
+		float : left;
+	}
+	
+	#search_area ul, #search_area li{
+		list-style : none;
+		margin : 0;
+		padding : 0;
+		float : left;
+		text-align : center;
+	}
+	
+	#search_bar>a>div:nth-of-type(1){
+		margin-left : 100px;
+	}
+	
+	#search_bar>a>div{
+		width : 100px;
+	}
+	
+	/* 왼쪽 상세검색 */
+	#left{
+		width : 200px;
+		height : 100%;
+		position : absolute;
+		left : 0;
+		top : 115.6px;
+		border-right : 1px solid #D5D5D5;
+	}
+	
+	#left div{
+		font-size : 13px;
+	}
+	
+	#search_job{
+		height : 150px;
+	}
+	
+	#search_area{
+		height : 110px;
+	}
+	
+	#search_job, #search_area{
+		width : 100%;
+		padding : 10px 15px;
+	}
+	
+	#search_job_info, #search_area_info{
+		padding : 5px;
+	}
+	
+	#search_job>a>div, #search_area>a>div{
+		font-size : 20px;
+		height : 30px;
+		font-weight : bold;
+		width : 100%;
+	}
+	
+	#search_job_info>a>div{
+		margin-bottom : 5px;
+	}
+	
+	#search_area_info>ul{
+		width : 170px;
+		margin-bottom : 5px;
+	}
+	
+	#search_area_info>ul li{
+		width : 30%;
+	}
+	
+	/* 중앙 상세검색 */
+	#center{
+		padding : 50px 0px 0px 100px;
+		height : 100%;
+	}
+	
+	#detailed_search{
+		height : 420px;
+	}
+	
+	#detailed_search ul{
+		list-style : none;
+		margin : 0;
+		padding : 0;
+		float : left;
+		text-align : center;
+	}
+	
+	#detailed_search_above, #detailed_search_above{
+		height : 212px;
+	}
+	
+	#derailed_search_title>ul>li:nth-of-type(2) ~ li, #derailed_search_title_2>ul>li{
+		height : 40px;
+		line-height : 40px;
+	}
+	
+	#derailed_search_title span{
+		float : right;
+	}
+	
+	#derailed_search_title>ul, #derailed_search_title_2>ul{
+		width : 100%;
+	}
+	
+	#derailed_search_title li, #derailed_search_title_2 li{
+		border : 1px solid #D5D5D5;
+	}
+	
+	#derailed_search_title, #derailed_search_title_2{
+		height : 42px;
+	}
+	
+	#big_search, #big_search_2{
+		height : 171px;
+	}
+	
+	#big_search *, #big_search_2 *{
+		text-align : left;
+	}
+	
+	#big_search>ul, #big_search_2>ul{
+		padding : 10px;
+		border : 1px solid #D5D5D5;
+		width : 173.33px;
+		height : 170px;
+		overflow : auto;
+	}
+	
+	#big_search>ul>li, #big_search_2>ul>li{
+		width : 100%;
+	}
+	
+	#big_search>ul>li>label, #big_search_2>ul>li>label{
+		font-size : 13px;
+		border : none;
+		background : white;
+	}
+	
+	#detailed_search input[type=checkbox]{
+		display : none;
+		cursor : pointer;
+	}
+	
+	#detailed_search label{
+		cursor : pointer;
+	}
+	
+	#detailed_search li{
+		border-radius : 5px;
+	}
+	
+	#search_content{
+		width : 100%;
+		height : 100%;
+	}
+	
+	#job_search, #area_search{
+		position : absolute;
+		top : 251px;
+		width : 1040px;
+		height : 170px;
+		background : white;
+		z-index : 100;
+		border : 1px solid #D5D5D5;
+	}
+	
+	#job_search_big, #area_search_big{
+		width : 287px;
+		height : 170px;
+		background : white;
+		float : left;
+	}
+	
+	#job_search_unit, #job_search_unit ul{
+		width : 690px;
+		height : 170px;
+		color : black;
+		background : white;
+		float : left;
+		margin-left : 30px;
+	}
+	
+	#area_search_unit, #area_search_unit ul{
+		width : 690px;
+		height : 170px;
+		color : black;
+		background : white;
+		float : left;
+		margin-left : 30px;
+	}
+	
+	#job_search_unit_ul li, #area_search_unit li{
+		width : 25%;
+	}
+	
+	#search_content{
+		height : 211px;
+	}
+	
+	#search_content *{
+		text-align : left;
+	}
+	
+	#search_content ul{
+		padding : 10px;
+		width : 346.66px;
+		height : 170px;
+		overflow : auto;
+	}
+	
+	#search_content li{
+		float : left;
+		list-style : none;
+		border : none;
+	}
+	
+	#job_search_big li{
+		width : 50%;
+	}
+	
+	#area_search_big li{
+		width : 33%;
+	}
+	
+	#job_search_big ul, #area_search_big ul{
+		border : 1px solid #D5D5D5;
+	}
+	
+	#search_content label{
+		font-size : 13px;
+		border : none;
+	}
+	
+	/* 태그 검색 */
+	#tag_search{
+		width : 100%;
+		height : 160px;
+		border : 1px solid #D5D5D5;
+		float : left;
+	}
+	
+	#tag_search ul, #tag_search li{
+		list-style : none;
+		margin : 0;
+		padding : 0;
+		float : left;
+		text-align : center;
+	}
+	
+	#tag_search button{
+		font-size : 13px;
+	}
+	
+	#tag .btn-primary{
+		background : white;
+		color : #3399FF;
+	}
+	
+	#tag_search div{
+		float : left;
+		height : 100%;
+	}
+	
+	#tags{
+		width : 720px;
+		padding : 10px;
+	}
+	
+	#tags{
+		overflow : auto;
+	}
+	
+	#tags>ul>li{
+		margin : 5px;
+	}
+	
+	#tag_reset{
+		width : 70px;
+		line-height : 170px;
+		margin-left : 20px;
+	}
+	
+	#tag_reset>.btn-primary{
+		background : white;
+		color : #3399FF;
+	}
+	
+	#tag_search_div{
+		line-height : 170px;
+		margin-left : 20px;
+	}
+	
+	#tag_search_btn{
+		width : 180px;
+		height : 50px;
+	}
+	
+	#age_btn, #gender_check{
+		float : right;
+		width : 50px;
+		height : 30px;
+		text-align : center;
+	}
+	
+	/* 슬라이드 */
+	.carousel-control-prev-icon, .carousel-control-next-icon{
+		background-color : black;
+	}
+	
+	#slideImg{
+		width : 1040px;
+		height : 400px;
+		line-height : 350px;
+	}
+	
+	.carousel-indicators{
+		margin-bottom : 50px;
+	}
+	
+	.carousel-indicators li{
+		background : black;
+		border-radius : 50px;
+	}
+	
+	.carousel-inner li{
+		float : left;
+		list-style : none;
+		height : 150px;
+		line-height : 150px;
+	}
+	
+	.carousel-inner li div:nth-of-type(1){
+		width : 40%;
+	}
+	
+	.carousel-inner li div:nth-of-type(2){
+		width : 60%;
+	}
+	
+	.carousel-inner li div{
+		float : left;
+	}
+	
+	/* 검색된 목록들 */
+	#list{
+		float : left;
+		width : 100%;
+		height : 100%;
+	}
+	
+	#search_solt{
+		width : 100%;
+		height : 100%;
+	}
+	
+	#search_solt *{
+		height : 40px;
+		padding : 5px;
+	}
+	
+	#search_list{
+		width : 100%;
+		height : 1000px;
+		margin : 0 auto;
+	}
+	
+	#search_list>div{
+		float : left;
+		width : 100%;
+		height : 150px;
+		border : 1px solid #D5D5D5;
+		margin : 1px;
+	}
+	
+	#paging{
+		float : left;
+		margin : 0 auto;
+		padding : 20px 0px;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
