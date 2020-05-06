@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></head>
+<style>
+	*{
+		font-family:'Nanum Gothic';
+		margin:0;
+		padding:0;
+	}
+	li{list-style:none;}
+	a{text-decoration:none;}
+	/* 개인회원가입 */
+	.join {width:40%;}
+	.join>h2, .tablist{text-align:center;}
+	.tablist b{font-size:1.5em;}
+	.lbl_email, .lbl_Birth, .lbl_tel{width:100%;}
+	#email, #code{border-radius:5px;}
+	small{
+		position:absolute; 
+		right:0;
+	}
+	.row{margin:0 auto;}
+	.btn-group-toggle{width:100%;}
+	.btn-group-toggle label{border:1px solid #ced4da;}
+	form>div:nth-child(7){margin-top:15px;}
+	.agree_tit{
+		margin-top:50px; 
+		margin-bottom:10px; 
+	}
+	.agree_article{
+		border:1px solid #ccc;
+		border-radius:5px;
+		background-color:#fafafa;
+	}
+	.agree_article .form-check{margin:10px 0;}
+	.agree_article .form-check:nth-child(1){font-weight:bold;}
+	.agree_article .form-check:nth-child(4){margin-bottom:20px;}
+	.agree_article .form-check-label{padding-left:15px;}
+	.view_indetail{
+		font-size:0.6em;
+		color:#8f8f8f;
+		text-decoration:underline;
+		position:absolute;
+    	right:15px; 
+	}
+	.btn-primary{margin:30px 0;}
+	/* 기업회원가입*/
+	.corp_tit{
+		margin-bottom:10px;
+	}
+	.corp_agree_tit, .corp_charge_tit, .corp_account_tit{
+		margin-top:50px; 
+		margin-bottom:10px; 
+	}
+	#addr2{margin-top:5px;}
+	#codelist{border-radius:5px;}
+</style>
+<script>
+//////////개인회원가입
+
+//정규표현식
+//비밀번호 검사
+function regExpChk(){
+		//이메일(아이디) 검사
+		var emailInput = document.getElementById("email").value;
+		if(emailInput==""){
+			alert("이메일을 입력하세요.");
+			return false;  //함수 종료
+		}
+		
+		//이메일 인증코드 검사
+		var email_Certify_Input = document.getElementById("email_Certify").value;
+		if(email_Certify_Input==""){
+			alert("이메일 인증코드를 입력하세요.");
+			return false;  
+		}
+		
+		//비밀번호 검사
+		var pwdInput = document.getElementById("pwd").value;
+		if(pwdInput==""){
+			alert("비밀번호를 입력하세요.");
+			return false;  
+		}
+		
+		//비밀번호 재확인
+		var pwdInput = document.getElementById("pwd").value;
+		var pwdChk_Input = document.getElementById("pwdChk").value;
+		if(pwdChk_Input==""){
+			alert("비밀번호를 재입력하세요.");
+			return false;
+		}
+		if(pwdChk_Input!=pwdInput){
+			alert("비밀번호가 일치하지않습니다. 다시 입력해주세요.");
+			return false;  
+		}
+		
+		//이름 검사
+		var nameInput = document.getElementById("name").value;
+		var reg = /^[가-힣]{2,7}$/;
+		if(nameInput==""){
+			alert("이름을 입력하세요.");
+			return false;  
+		}
+		if(!reg.test(document.getElementById("name").value)){
+			alert("이름은 한글만 2~7글자까지 가능합니다.");
+			return false;
+		}
+		
+		//생년월일 검사
+		var yearInput = document.getElementById("year").value;
+		var monthInput = document.getElementById("month").value;
+		var dayInput = document.getElementById("day").value;
+		if(yearInput==""){
+			alert("년도(4자리)를 입력하세요.");
+			return false;  
+		}else if(monthInput=="월"){
+			alert("월을 선택하세요.");
+			return false;  
+		}else if(dayInput==""){
+			alert("일을 입력하세요.");
+			return false;  
+		}
+		
+		//휴대전화 검사
+		var codeInput = document.getElementById("code").value;
+		var telInput = document.getElementById("tel").value;
+		var numInput = document.getElementById("num").value;
+		if(codeInput=="이동통신사"){
+			alert("이동통신사를 선택하세요.");
+			return false;  
+		}else if(telInput==""){
+			alert("휴대전화번호를 입력하세요.");
+			return false;  
+		}else if(numInput==""){
+			alert("인증번호를 입력하세요.");
+			return false;  
+		}
+		
+		return true;
+
+}
+
+function check(){
+	if(document.getElementById("check1").prop("checked")==false&&document.getElementById("check3").prop("checked")==false&&document.getElementById("check2").prop("checked")==false){
+		alert("약관동의 체크는 필수입니다.");
+	}
+}
+
+//생년월일_월
+function monthOption(){
+	var optionTag="<option>"+"월"+"</option>";             
+	for(i=1; i<=12; i++){
+		optionTag += "<option value='"+i+"'>" +i +"</option>";
+	}
+	document.getElementById("month").innerHTML = optionTag;
+}
+
+//휴대전화_이동통신사
+function codeOption(){
+	var tagOption=["이동통신사", "SKT", "KT", "LGU+", "알뜰폰"];    
+	var tag="";
+	for(i=0; i<tagOption.length; i++){
+		tag += "<option value='"+tagOption[i]+"'+>" +tagOption[i] +"</option>";
+	}
+	document.getElementById("code").innerHTML = tag;
+}
+
+//생년월일_자동 커서 이동1
+function cursorMove1(){
+		var inputYear = document.getElementById("year").value;
+		if(inputYear.length==4){  //year에 4글자가 입력되면
+			//(자동)커서 이동 : year  → month 
+			document.getElementById("month").focus();  //focus() 함수
+		}
+}
+//생년월일_자동 커서 이동2
+function cursorMove2(month) {
+	if(month!="월"){
+		document.getElementById("day").focus();
+	}
+}
+
+//휴대전화_자동 커서 이동
+function cursorMove3(str) {
+	if(str!="이동통신사"){
+		document.getElementById("tel").focus();	
+	}
+}
+
+//약관동의_전체동의 체크박스
+$(function(){
+	$("#check1").change(function(){  
+		$(".agree_article .form-check-label >input").prop("checked",this.checked);
+	});
+});
+
+//////////기업회원가입
+
+//var hp = '01012345678';
+//hp = hp.replace(/(^02.{0}|^01.{1}|[0-9]{3})([0-9]+)([0-9]{4})/,"$1-$2-$3");
+
+//사업자등록번호 하이픈 자동처리 정규식
+$(document).on("keyup", "#corp_code", function(){
+				//$('#id').val().replace(" ", "") -> 첫번째 공백 1개만 없어짐. 
+				//$.trim($('#id').val()) -> 글자사이 공백은 안없어짐.﻿ 
+				//$('#id').val().replace(/ /g, ''); -> 모든 공백 없어짐.﻿     //g :  global의 뜻, 전역 매칭을 한다. 전체 모든 문자열을 변경
+				//$('#id').val().replace(/,/g, ''); -> 모든 콤마(,) 없어짐.﻿ 
+	                                                                                                       //.replace("--", "-") 
+	$(this).val( $(this).val().replace(/[^0-9]/g, "").replace(/([0-9]{3})([0-9]{2})([0-9]{5})?/, "$1-$2-$3") );
+});
+
+//업종 선택
+function jobOption(){
+	var tagOption=["업종 선택", "솔루션·SI·ERP·CRM", "웹에이젼시", "쇼핑몰·오픈마켓", "포털·인터넷·컨텐츠", "네트워크·통신·모바일", "하드웨어·장비", "정보보안·백신", "IT컨설팅", "게임"];    
+	var tag="";
+	for(i=0; i<tagOption.length; i++){
+		tag += "<option>"+tagOption[i]+"</option>";
+	}
+	document.getElementById("job_categroy").innerHTML = tag;
+}
+
+//휴대전화_이동통신사
+function codelsitOption(){
+	var tagOption=["이동통신사", "SKT", "KT", "LGU+", "알뜰폰"];    
+	var tag="";
+	for(i=0; i<tagOption.length; i++){
+		tag += "<option value='"+tagOption[i]+"'+>" +tagOption[i] +"</option>";
+	}
+	document.getElementById("codelist").innerHTML = tag;
+}
+
+//휴대전화_자동 커서 이동
+function cursorMove4(str){
+	if(str!="이동통신사"){
+		document.getElementById("corp_charge_tel").focus();	
+	}
+}
+</script>
+</head>
+
+<body onload="monthOption(); codeOption(); jobOption(); codelsitOption();"> 
+<nav class="navbar bg-primary">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="../main/index.html">
+  	<span>IT-z</span>
+    <!-- <img src="img/img_main01.jpg" alt="logo" style="width:40px;"> -->
+  </a>
+</nav>
+
+<div class="container join">
+	<h2><a href="#"><img src=""/></a></h2>
+  	<br>
+  	<!-- Nav tabs -->
+  	<ul class="nav nav-tabs nav-pills justify-content-center tablist" role="tablist">
+  	
+    	<li class="nav-item">
+     		<a class="nav-link active" data-toggle="tab" href="#home"><b>개인회원가입</b><br>만15세이상가능</a>
+   		</li>
+    	<li class="nav-item">
+      		<a class="nav-link" data-toggle="tab" href="#menu1"><b>기업회원가입</b><br>무료회원가입!</a>
+    	</li>
+  	</ul>
+
+  	<!-- Tab panes -->
+	<div class="tab-content">
+		<!-- 개인회원가입 -->
+		<div id="home" class="container tab-pane active"><br>
+		<form method="post" name="personFrm" action="#" onsubmit="return regExpChk()">
+			<div class="form-group input-group">
+				<label for="email" class="lbl_email">이메일(아이디)</label> 
+				<input type="email" class="form-control" id="email" placeholder="이메일 주소" name="email">
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="submit">인증요청</button>
+				</div>
+			</div>
+			
+			<div class="form-group input-group">
+				<label for="email" class="lbl_email">이메일 인증코드</label>
+				<small>메일함을 확인하여 이메일 인증코드를 입력해주세요.</small>
+				<input type="text" class="form-control" id="email_Certify" placeholder="인증코드" name="email_Certify">
+				<div class="input-group-append">
+					<button class="btn btn-secondary" type="submit">인증확인</button>
+				</div>
+			</div>
+	
+			<div class="form-group">
+				<label for="pwd">비밀번호</label> 
+				<input type="password" class="form-control" id="pwd" placeholder="6~16자의 영문 대소문자, 숫자, 특수문자 중 2가지 이상 조합" name="pwd" maxlength="20">
+			</div>
+			<div class="form-group">
+				<label for="pwdChk">비밀번호 재확인</label> 
+				<input type="password" class="form-control" id="pwdChk" placeholder="비밀번호 확인" name="pwdChk" maxlength="20">
+			</div>
+	
+			<div class="form-group">
+				<label for="text">이름</label> 
+				<input type="text" class="form-control" id="name" placeholder="이름" name="name" maxlength="20">
+			</div>
+	
+			<div class="form-group row">
+				<label for="text" class="lbl_Birth">생년월일</label> 
+				<input type="text" class="form-control col-sm-4" id="year" placeholder="년(4자)" name="year" maxlength="4" onkeyup="cursorMove1()"> 
+				<select class="form-control col-sm-4" id="month" name="monthlist" onchange="cursorMove2(this.value)">
+				</select> 
+				<input type="text" class="form-control col-sm-4" id="day" placeholder="일" name="day" maxlength="2">
+			</div>
+			
+			<div class="form-group">
+				<label for="gender">성별</label> 
+				<br>
+				<div class="btn-group btn-group-toggle" data-toggle="buttons">
+					<label class="btn btn-light">
+						<input type="radio" class="form-check-input" id="male" name="gender" value="option1" checked> 남자
+					</label>
+					<label class="btn btn-light">
+						<input type="radio" class="form-check-input" id="female" name="gender" value="option2"> 여자
+					</label>
+				</div>
+			</div>
+			
+			<div class="form-group input-group">
+				<label for="tel" class="lbl_tel">휴대전화</label>
+				<select class="form-control col-sm-4" id="code" name="code" onchange="cursorMove3(this.value)">
+				</select>
+				<input type="tel" class="form-control" id="tel" placeholder="'-'없이 숫자만 입력" name="tel" maxlength="11">
+				<div class="input-group-append">
+					<button class="btn btn-secondary" type="submit">인증번호 발송</button>
+				</div>
+			</div>
+			
+			<div class="form-group input-group">
+				<input type="text" class="form-control" id="num" placeholder="인증번호" name="num">
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="submit">확인</button>
+				</div>
+			</div>
+			
+			<div class="agree_tit"><strong>약관동의</strong></div>
+			<div class="agree_article">
+				<div class="form-check">
+			    	<label class="form-check-label" for="check1">
+			        	<input type="checkbox" class="form-check-input" id="check1" name="option1" value="something">전체동의
+			      	</label>
+			    </div>
+			    <div class="form-check">
+		        	<label class="form-check-label" for="check2">
+		        		<input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">개인회원 약관에 동의
+		      		</label>
+		      		<a href="#" class="view_indetail" target="_blank">상세보기</a>
+			    </div>
+			    <div class="form-check">
+		        	<label class="form-check-label" for="check3">
+		        		<input type="checkbox" class="form-check-input" id="check3" name="option3" value="something">개인정보 수집 및 이용에 동의
+		      		</label>
+		      		<a href="#" class="view_indetail" target="_blank">상세보기</a>
+			    </div>
+				<div class="form-check">
+		        	<label class="form-check-label" for="check4">
+		        		<input type="checkbox" class="form-check-input" id="check4" name="option4" value="something">개인정보 제 3자 제공 및 위탁사항 이용약관
+		      		</label>
+		      		<a href="#" class="view_indetail" target="_blank">상세보기</a>
+			    </div>
+			</div>
+			
+			<button type="submit" class="btn btn-primary btn-block" onclick="check()">가입하기</button>
+		</form>
+		</div>
+
+		<!-- 기업회원가입 -->
+		<div id="menu1" class="container tab-pane fade"><br>
+			<!-- <small><code>*</code>는 필수선택</small> --> 
+		    <form method="post" name="corpFrm" action="#">
+		    <div class="corp_tit"><strong>기업인증</strong></div>
+			<div class="form-group input-group">
+				<label for="corp_code" class="lbl_email">사업자등록번호</label> 
+				<input type="text" class="form-control" id="corp_code" placeholder="'-'없이 숫자만 입력" name="corp_code" maxlength="12">
+				<div class="input-group-append">
+					<button class="btn btn-secondary" type="submit">인증</button>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label for="company_name">기업명</label> 
+				<input type="text" class="form-control" id="company_name" placeholder="기업명" name="company_name" maxlength="20">
+			</div>
+			
+			<div class="form-group">
+				<label for="ceo_name">대표자명</label> 
+				<input type="text" class="form-control" id="ceo_name" placeholder="대표자명" name="ceo_name" maxlength="20">
+			</div>
+			
+			<div class="form-group">
+				<label for="company_addr">회사주소</label> 
+				<input type="text" class="form-control" id="company_addr1" placeholder="우편번호/주소" name="company_addr1" maxlength="20">
+				<input type="text" class="form-control" id="company_addr2" placeholder="상세주소" name="company_add2" maxlength="20">
+			</div>
+			
+			<div class="form-group">
+				<label for="job_categroy">업종</label> 
+				<select class="form-control" id="job_categroy" name="job_categroy">
+				</select> 
+			</div>
+
+			<div class="form-group">
+				<label for="choice_company">기업구분</label> 
+				<select class="form-control" id="choice_company" name="choice_company">
+					<option value=""></option>
+					<option value="일반">일반</option>
+					<option value="파견/도급/채용대행">파견/도급/채용대행</option>
+					<option value="헤드헌팅">헤드헌팅</option>
+				</select> 
+			</div>
+			
+			<div class="corp_charge_tit"><strong>인사담당자인증</strong></div>
+			<div class="form-group">
+				<label for="corp_charge">담당자명</label> 
+				<input type="text" class="form-control" id="corp_charge" placeholder="담당자명" name="corp_charge" maxlength="20">
+			</div>
+			
+			<div class="form-group input-group">
+				<label for="corp_charge_tel" class="lbl_tel">휴대전화</label>
+				<select class="form-control col-sm-4" id="codelist" name="codelist" onchange="cursorMove4(this.value)">
+				</select>
+				<input type="tel" class="form-control" id="corp_charge_tel" placeholder="'-'없이 숫자만 입력" name="corp_charge_tel" maxlength="11">
+				<div class="input-group-append">
+					<button class="btn btn-secondary" type="submit">인증번호 발송</button>
+				</div>
+			</div>
+			
+			<div class="form-group input-group">
+				<input type="text" class="form-control" id="num2" placeholder="인증번호" name="num2">
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="submit">확인</button>
+				</div>
+			</div>
+		
+			<div class="corp_account_tit"><strong>ID/PW</strong></div>
+			<div class="form-group input-group">
+				<label for="corp_email" class="lbl_email">이메일(아이디)</label> 
+				<input type="email" class="form-control" id="corp_email" placeholder="이메일 주소" name="corpemail">
+				<div class="input-group-append">
+					<button class="btn btn-outline-secondary" type="submit">인증요청</button>
+				</div>
+			</div>
+			
+			<div class="form-group input-group">
+				<label for="corp_email_Certify" class="lbl_email">이메일 인증코드</label>
+				<small>메일함을 확인하여 이메일 인증코드를 입력해주세요.</small>
+				<input type="email" class="form-control" id="corp_email_Certify" placeholder="인증코드" name="corp_email_Certify">
+				<div class="input-group-append">
+					<button class="btn btn-secondary" type="submit">인증확인</button>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label for="corp_pwd">비밀번호</label> 
+				<input type="password" class="form-control" id="corp_pwd" placeholder="6~16자의 영문 대소문자, 숫자, 특수문자 중 2가지 이상 조합" name="corp_pwd" maxlength="20">
+			</div>
+			<div class="form-group">
+				<label for="corp_pwdChk">비밀번호 재확인</label> 
+				<input type="password" class="form-control" id="corp_pwdChk" placeholder="비밀번호 확인" name="corp_pwdChk" maxlength="20">
+			</div>
+			
+			<div class="corp_agree_tit"><strong>약관동의</strong></div>
+			<div class="agree_article">
+			<div class="form-check">
+		    	<label class="form-check-label" for="check11">
+		        	<input type="checkbox" class="form-check-input" id="check11" name="option1" value="something">전체동의
+		      	</label>
+		    </div>
+		    <div class="form-check">
+	        	<label class="form-check-label" for="check22">
+	        		<input type="checkbox" class="form-check-input" id="check22" name="option2" value="something">기업회원 약관에 동의
+	      		</label>
+	      		<a href="#" class="view_indetail" target="_blank">상세보기</a>
+		    </div>
+		    <div class="form-check">
+	        	<label class="form-check-label" for="check33">
+	        		<input type="checkbox" class="form-check-input" id="check33" name="option3" value="something">개인정보 수집 및 이용에 동의
+	      		</label>
+	      		<a href="#" class="view_indetail" target="_blank">상세보기</a>
+		    </div>
+			<div class="form-check">
+	        	<label class="form-check-label" for="check44">
+	        		<input type="checkbox" class="form-check-input" id="check44" name="option4" value="something">개인정보 제 3자 제공 및 위탁사항 이용약관
+	      		</label>
+	      		<a href="#" class="view_indetail" target="_blank">상세보기</a>
+		    </div>
+			</div>
+			
+			<button type="submit" class="btn btn-primary btn-block" >가입하기</button>
+		</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></head>
+<style>
+#container{
+	width:960px;
+	margin:0 auto;
+	margin-top:32px;  
+}
+form{text-align:center;}
+small{padding-left:10px;}
+table {
+    width:100%;
+    border-top:2px solid #444;  
+    font-size:0.9em;  
+}
+tr{border-bottom:1px solid #e5e5e5;}
+th{
+	width:20%;
+	text-align:left;
+	background-color:#f9f9f9;  
+	padding:10px;
+}
+td{
+	text-align:left;
+	padding:10px;
+}
+button{
+	margin-top:38px;
+	width:100px;
+	height:50px;
+	text-align:center;
+}
+.btnOK{
+	font-size:1em;
+	font-weight:bold; 
+}
+</style>
+</head>
+
+<body>
+<nav class="navbar bg-primary">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#">
+    <img src="img/main.jpgs" alt="logo" style="width:40px;">
+  </a>
+</nav>
+
+<div id="container">
+		<h2>비밀번호 재설정</h2>
+		<p><small><mark>새로운 비밀번호</mark>를 입력해 주세요.</small></p>
+		<form method="post" action="aaa.jsp" name="form" id="form">
+			<div>
+				<table>
+					<tbody>
+						<tr>
+							<th scope="row">
+								<label for="lb_pw">새로운 비밀번호</label>
+							</th>
+							<td>
+								<input type="password" id="pwd" maxlength="20"/>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<label for="lb_pw">새로운 비밀번호 확인</label>
+							</th>
+							<td>
+								<input type="password" id="pwd" maxlength="20"/>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<button type="button" class="btn btn-primary btn-lg btnOK" onclick="#">확인</button>
+		</form>
+</div>
+</body>
+</html>
