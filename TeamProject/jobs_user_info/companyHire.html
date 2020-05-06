@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+	crossorigin="anonymous"></script>
+</head>
+<link rel="stylesheet" href="companyHire2.css" type="text/css"/>
+<script>
+	function followingTop() {
+		var scrollTop = window.scrollY; // 스크롤바의 위치!
+
+		if (scrollTop > 200) {
+			document.getElementById("floatingView").style.display = "block";
+			document.getElementById("floatingView").style.top = "0px"
+			document.getElementById("floatingView").style.padding = "10px"
+		} else {
+			document.getElementById("floatingView").style.display = "none";
+
+		}
+	}
+</script>
+<body style="background-color: gray" onscroll="followingTop()">
+	<div class="remote">
+		<!-- 리모컨 -->
+		<button>
+			<a href="#startContainer"> <img src="img/1.png">
+				<h5>채용공고</h5></a>
+		</button>
+		<button>
+			<a href="#howto"><img src="img/2.png">
+				<h5>접수방법</h5></a>
+		</button>
+		<button>
+			<a href="#companyInfo"><img src="img/3.png">
+				<h5>기업정보</h5></a>
+		</button>
+		<button>
+			<a href="#recommend"><img src="img/4.png">
+				<h5>추천채용</h5></a>
+		</button>
+	</div>
+
+	<div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12"
+		style="margin-top: 100px">
+		<div class="container" style="background-color: #fff;">
+			<!-- 본문 -->
+			<!-- 헤더 -->
+			<div class="container" id="floatingView" style="padding-top:20px">
+				<!-- 안보이다가 스크롤 내리면 따라오게 되는 뷰 -->
+				<a href="#" class="" target="_blank">(주)비트캠프</a>
+				<button class="btn btn-outline-primary">관심기업 등록</button>
+
+				<h1>
+					<span>2020년 각 부문 신입 채용</span> <input type="button" class="starBtn">
+					<button class="btn btn-outline-primary btn-lg">홈페이지 지원</button>
+					<b>D-3</b>
+				</h1>
+			</div>
+
+			<div class="header" id="startContainer" style="padding-top:10px">
+				<a href="#" class="" target="_blank">(주)비트캠프</a>
+				<button class="btn btn-outline-primary">관심기업 등록</button>
+
+				<h1>
+					<span>2020년 각 부문 신입 채용</span> <input type="button" class="starBtn">
+					<button class="btn btn-outline-primary p-10">홈페이지 지원</button>
+				</h1>
+			</div>
+
+			<div style="width: 100%">
+				<!-- 기업 간략한 정보 1 -->
+				<div class="col col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<dl>
+						<dt>경력</dt>
+						<dd>경력</dd>
+					</dl>
+					<dl>
+						<dt>학력</dt>
+						<dd>대졸 이상</dd>
+					</dl>
+					<dl>
+						<dt>근무형태</dt>
+						<dd>정규직</dd>
+					</dl>
+				</div>
+				<!-- 기업 간략한 정보 2 -->
+				<div class="col">
+					<dl>
+						<dt>급여</dt>
+						<dd>회사내규에 따름</dd>
+					</dl>
+					<dl>
+						<dt>직급/직책</dt>
+						<dd>면접 후 결정</dd>
+					</dl>
+					<dl>
+						<dt>근무지역</dt>
+						<dd>서울, 경기</dd>
+					</dl>
+				</div>
+				<!-- 기업 간략한 정보 끝 -->
+			</div>
+
+			<div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div
+					class="container col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12"
+					style="width: 960px">
+					<table
+						class="companyHire col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12"
+						id="companyHire">
+						<tr>
+							<td height="30px"></td>
+						</tr>
+						<tr>
+							<td><img src="img/tag.jpg" /></td>
+							<td><span>사업소개</span></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>원익아이피에스는 반도체, 디스플레이 핵심 공정 장비 제조사로서 Deposition,
+								Diffusion, Etching 분야의 다각적인 포트폴리오를 갖춘 Global 종합 장비 메이커입니다. 작년기준
+								매출 7천억원, 직원수 1,500명의 중견기업으로 국내 장비업계 가운데 최대 규모의 연구소를 갖추고 있으며 매해
+								매출액의 10% 이상을 R&D에 투자하며 원천 기술 확보에 노력을 기울이고 있습니다.</td>
+						</tr>
+						<tr>
+							<td height="65"></td>
+						</tr>
+
+						<tr>
+							<td><img src="img/tag.jpg" /></td>
+							<td><span>근무환경</span></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>즐겁고 건강한 업무환경을 위해 사내 카페테리아, 조/중/석식 무료, 셔틀버스 및 기숙사 운영,
+								건강검진 및 의료비 지원을 하고 있습니다. 또한 휴양시설 지원, 사내 동호회 운영, 가족친화 프로그램 운영,
+								해외배낭여행비 지원, 근무시간관리프로그램 등을 통해 직원들의 행복한 여가생활도 함께 지원하고 있습니다.</td>
+						</tr>
+						<tr>
+							<td height="65"></td>
+						</tr>
+
+						<tr>
+							<td><img src="img/tag.jpg" /></td>
+							<td><span>모집부문 및 자격요건</span></td>
+						</tr>
+						<table class="table" id="qualify">
+							<thead>
+								<tr style="background-color: #4f7ebc; color: #fff">
+									<td width="120px"><b>직무구분</b></td>
+									<td><b>세부직무</b></td>
+									<td><b>수행업무</b></td>
+									<td><b>자격요건 및 우대사항</b></td>
+								</tr>
+							<thead>
+							<tbody>
+								<tr>
+									<td rowspan="2" style="background-color: #f9f9f9">영업</td>
+									<td align="center">반도체/디스플레이 국내영업</td>
+									<td>- 고객 투자상황에 따른 비즈니스 전략 수립<br> - 고객과의
+										공동개발과제(JDP/JEP)대응 및 기술미팅<br> - 신규 고객 업무 대응 <br> - 원가
+										및 손익분석
+									</td>
+									<td>- 학사이상/ 전자, 기계, 화학, 재료 등 관련학과 (경력 5년 이상)<br> -
+										(필수)반도체/디스플레이 전공정 장비 영업 경험자<br> - PECVD, METAL, Dry
+										ether, 열처리 OLED 장비 영업 경험 <br> - 반도체/디스플레이 설비 장비/공정엔지니어
+										경력자<br> - 해외 선진자 장비영업 출신 우대
+									</td>
+								</tr>
+								<tr>
+									<td>반도체장비 부품영업</td>
+									<td>- 반도체 부품 영업<br> - 부품 수출입 관련 업무 <br> - 부품 출고,
+										납기, 재고 관리 <br> - 부품 견적서 발행 및 매출 마감 <br> - 고객사 VOC 대응
+									</td>
+									<td>- 학사이상 / 전공무관 (경력 2년 이상) <br> - 중국어, 영어 가능자 우대 <br>
+										- 수출입 관련 업무 경험자<br> - 반도체 설비 엔니지어 경험 우대 <br> - ERP
+										경험자
+									</td>
+								</tr>
+								<tr>
+									<td style="background-color: #f9f9f9">가구 설계</td>
+									<td>반도체 기구설계</td>
+									<td>- 반도체 전공정, 열처리 장비 설계 <br> - 반도체 장비 신규 Concept 개발
+										<br> - 핵심 특화 기술 개발 및 요소 설계 개발 <br> - 설계 표준화 및 선진화
+									</td>
+									<td>- 학사이상 / 기계공학 등 관련학과 (경력 3년 이상) <br> - 해외 선진사 설비
+										설계 경험자 우대 <br> - 반도체/디스플레이 장비, 진공 기술 경력 우대 <br> - 설계
+										3D Tool (Pro-E, CREO) 사용 가능 <br> - 독립 프로젝트 가능 <br> -
+										외국어(영어, 중국어, 일본어)활용 능력 우수자
+									</td>
+								</tr>
+								<tr>
+									<td height="65" style="border: 0px"></td>
+								</tr>
+						</table>
+						<table class="companyHire">
+							<tr>
+								<td><img src="img/tag.jpg" /></td>
+								<td><span>근무조건</span></td>
+							</tr>
+
+							<tr>
+								<td></td>
+								<td>- 근무형태 : 정규직<br> - 근무지 : 본사<br> - 근무요일 : 월~금,
+									부서별 유연근무제 실시<br> - 급여조건 : 회사 내규에 따름<br> - 회사주소 : 경기도
+									평택시 진위면 진위산단로 75(본사)
+								</td>
+							</tr>
+							<tr>
+								<td height="65"></td>
+							</tr>
+							<tr>
+								<td><img src="img/tag.jpg" /></td>
+								<td><span>문의사항</span></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>- 담당자 : 인사담당자(인사팀)<br> - 전화 : 031-8047-7134<br>
+									- FAX : 031-8047-7083
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td align="center"><img src="img/company.png" /></td>
+							</tr>
+							<tr>
+								<td height="100"></td>
+							</tr>
+						</table>
+						</tbody>
+
+						<tfoot>
+							<table class="howto" id="howto">
+								<h1>접수기간 및 방법</h1>
+								<tr class="info_period">
+									<td class="start">시작일</td>
+									<td style="width: 800px">2020.04.01 00:00</td>
+								</tr>
+								<tr>
+									<td class="end">마감일</td>
+									<td>2020.05.01 23:59</td>
+								</tr>
+								<tr>
+									<td align="center" colspan="2" width="900px"><span><button class="btn btn-outline-primary">홈페이지
+												지원</button></span></td>
+								</tr>
+								<tr>
+									<td height="50"></td>
+								</tr>
+							</table>
+
+							<div class="container" id="companyInfo">
+								<!-- 기업정보 -->
+								<h1>기업정보</h1>
+								<div>
+									<img src="img/company.png" width="300px" height="300px">
+								</div>
+								<div>
+									<span><b>(주)원익아이피에스</b></span>
+									<button class="btn btn-outline-primary btn-sm">관심기업 등록</button>
+									<button class="btn btn-outline-primary btn-sm">기업정보></button>
+									<button class="btn btn-outline-primary btn-sm">연봉정보></button>
+									<br> <br> <br>
+								</div>
+								<div>
+									<dl>
+										<dt>기업형태</dt>
+										<dd>코스닥,중견기업</dd>
+									</dl>
+									<dl>
+										<dt>업종</dt>
+										<dd>반도체 제조용 기계 제조업</dd>
+										<br>
+									</dl>
+									<dl>
+										<dt>매출액</dt>
+										<dd>100억원</dd>
+									</dl>
+									<dl>
+										<dt>홈페이지</dt>
+										<dd>www.###.com</dd>
+										<br>
+									</dl>
+									<dl>
+										<dt>사원수</dt>
+										<dd>100명</dd>
+									</dl>
+									<dl>
+										<dt>설립일</dt>
+										<dd>2017년</dd>
+										<br>
+									</dl>
+									<dl>
+										<dt>대표자명</dt>
+										<dd>이현덕</dd>
+									</dl>
+
+								</div>
+							</div>
+							<!-- 기업정보 -->
+						</tfoot>
+					</table>
+					<br> <br> <br> <br> <br> <br> <br>
+					<br> <br> <br> <br> <br> <br> <br>
+					<br> <br> <br> <br>
+				</div>
+			</div>
+
+
+		</div>
+
+		<!-- 본문 -->
+
+		<div>
+			<!-- 추천 채용 -->
+			<div class="container" id="recommend" style="background-color: #fff;padding:20px;margin-bottom:20px" >
+				<h2>
+					<strong>추천</strong> 채용정보
+				</h2>
+				<table class="table">
+					<tbody>
+						<tr class="table table-primary">
+							<th>기업명</th>
+							<th>공고명</th>
+							<th>마감일, 등록일</th>
+						</tr>
+						<tr>
+							<td><a>아드반테스트코리아(주)</a>
+								<button class="btn btn-outline-primary">
+									<span>관심기업 등록</span>
+								</button></td>
+							<td><span> <a>아드반테스트코리아㈜ 신입/경력 모집</a> <input
+									type="checkbox" class="starCheck" id="starCheck"> <label
+									for="starCheck"> </label>
+							</span> <span> 이천시 <span>|</span> 신입/경력 <span>|</span> 대졸↑
+							</span></td>
+							<td><span><span>~ 4/26(일)</span>13일 전 등록</span></td>
+						</tr>
+
+						<tr>
+							<td><a>기업222(주)</a>
+								<button class="btn btn-outline-primary">
+									<span>관심기업 등록</span>
+								</button></td>
+							<td><span> <a>아드반테스트코리아㈜ 신입/경력 모집</a> <input
+									type="checkbox" class="starCheck" id="starCheck"> <label
+									for="starCheck"> </label>
+							</span> <span> 이천시 <span>|</span> 신입/경력 <span>|</span> 대졸↑
+							</span></td>
+							<td><span><span>~ 4/26(일)</span>13일 전 등록</span></td>
+						</tr>
+
+						<tr>
+							<td><a>기업3333(주)</a>
+								<button class="btn btn-outline-primary">
+									<span>관심기업 등록</span>
+								</button></td>
+							<td><span> <a>아드반테스트코리아㈜ 신입/경력 모집</a> <input
+									type="checkbox" class="starCheck" id="starCheck"> <label
+									for="starCheck"> </label>
+							</span> <span> 이천시 <span>|</span> 신입/경력 <span>|</span> 대졸↑
+							</span></td>
+							<td><span><span>~ 4/26(일)</span>13일 전 등록</span></td>
+						</tr>
+
+						<tr>
+							<td><a>기업4444(주)</a>
+								<button class="btn btn-outline-primary">
+									<span>관심기업 등록</span>
+								</button></td>
+							<td><span> <a>아드반테스트코리아㈜ 신입/경력 모집</a> <input
+									type="checkbox" class="starCheck" id="starCheck"> <label
+									for="starCheck"> </label>
+							</span> <span> 이천시 <span>|</span> 신입/경력 <span>|</span> 대졸↑
+							</span></td>
+							<td><span><span>~ 4/26(일)</span>13일 전 등록</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+		<!-- 추천채용정보 끝 -->
+	</div>
+</body>
+</html>
