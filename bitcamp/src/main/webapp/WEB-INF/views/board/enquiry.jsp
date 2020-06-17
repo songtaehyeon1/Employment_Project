@@ -18,7 +18,7 @@
 		<li>조회수</li>
 		<li>3</li>
 		<li><a href = "/bitcamp/enquiry_listForm">고</a></li>
-		<li>홍길동홍길동홍홍</li>
+		<li>홍길동홍길동홍홍홍</li>
 		<li>2020-06-10</li>
 		<li>123</li>
 		<li>2</li>
