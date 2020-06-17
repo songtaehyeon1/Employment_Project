@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script></head>
+<style>
+#container{
+	width:960px;
+	margin:0 auto;
+	margin-top:32px;  
+}
+form{text-align:center;}
+small{padding-left:10px;}
+table {
+    width:100%;
+    border-top:2px solid #444;  
+    font-size:0.9em;  
+}
+tr{border-bottom:1px solid #e5e5e5;}
+th{
+	width:20%;
+	text-align:left;
+	background-color:#f9f9f9;  
+	padding:10px;
+}
+td{
+	text-align:left;
+	padding:10px;
+}
+button{
+	margin-top:38px;
+	width:100px;
+	height:50px;
+	text-align:center;
+}
+.btnOK, .btnCancel{
+	font-size:1em;
+	font-weight:bold; 
+}
+</style>
+<script>
+$(function(){
+	$(".btnOK").on('click',function(){
+		if($("#pwd").val()==""){
+			alert("비밀번호를 입력해주세요.");
+			return false;
+		}
+	});	
+});
+</script>
+</head>
+
+<body>
+<nav class="navbar bg-primary">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#">
+    <img src="img/img_main01.jpg" alt="logo" style="width:40px;">
+  </a>
+</nav>
+
+<div id="container">
+		<h2>비밀번호 확인</h2>
+		<p><small>회원님의 정보를 안전하게 보호하기 위해 비밀번호를 다시 한 번 입력해 주세요.</small></p>
+		<form method="post" action="person_info.html" name="form" id="form">
+			<div>
+				<table>
+					<tbody>
+						<tr>
+							<th scope="row">이메일(아이디)</th>
+							<td>
+								<strong>bitcamp@gmail.com</strong>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">
+								<label for="pwd">비밀번호</label>
+							</th>
+							<td>
+								<input type="password" id="pwd" maxlength="20"/>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			
+			<button type="submit" class="btn btn-primary btn-lg btnOK">확인</button>
+			<button type="button" class="btn btn-secondary btn-lg btnCancel" onclick="#">취소</button>
+		</form>
+</div>
+</body>
+</html>

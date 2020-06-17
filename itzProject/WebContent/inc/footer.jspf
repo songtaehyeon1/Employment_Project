@@ -1,0 +1,70 @@
+<style>
+footer{
+		background-color:#eee;
+		text-align:center;
+		padding:50px;
+		width : 100%;
+		float : left;
+	}
+	.info li{
+		display:inline-block;
+		margin:0 10px;
+	}
+	.info li:after{
+		content:"|";  /* | :shift+\ */ 
+		margin:0 20px;
+	}
+	.info li:nth-child(3):after,
+	.info li:nth-child(5):after, /* <br>도 객체로 인식하기때문에 5번째로 불러야한다. */
+	.info li:last-child:after{
+		content:"";	
+	}
+	.top_btn{
+		width:40px;
+		height:40px;
+		border-radius:40px;
+		font-weight:bold;
+		position:fixed;
+		bottom:20px;
+		right:20px;
+		display:none;
+	}
+</style>
+<script>
+$(function(){
+	//탑버튼 이벤트
+    $(window).scroll( function(){     //스크롤 시      
+            var scr_t = $(window).scrollTop();  //현재 스크롤 위치
+            
+        	//탑버튼
+            if(scr_t > 400){
+    			$(".top_btn").fadeIn()
+    		}else{
+    			$(".top_btn").fadeOut()
+    		}
+    });
+    
+    //탑버튼
+    $(".top_btn").click(function(){
+		$("body, html").stop().animate({"scrollTop":0},1000) 
+	}); 
+});
+</script>
+<footer>
+	<ul class="info">
+    	<li>(주) IT-z</li>
+        <li>대표 : 김비트</li>  
+        <li>사업자등록번호: 214-85-24928</li> <br>
+        <li>서울시 서초구 강남대로 459 (서초동, 백암빌딩)</li> <br>
+        <li>이메일 : it-z@gmail.com</li>  
+        <li>대표전화 : 02.123.4567</li>  
+        <li>팩스 : 02.1234.5678</li> 
+    </ul> <!--info end-->
+    
+    <p class="copy">
+    	&copy; 2020 IT-z All rights reserved
+    </p>
+</footer> 
+
+
+

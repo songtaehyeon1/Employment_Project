@@ -1,0 +1,552 @@
+@charset "UTF-8";
+	/* 모든 스타일 */
+	*{
+		font-size : 15px;
+		margin : 0;
+		padding : 0;
+	}
+	
+	.btn-primary, .btn-primary:link, .btn-primary:hover, .btn-primary:visited{
+		background-color : #3399FF;
+		border : 1px solid #3399FF;
+	}
+	
+	hr{
+		margin : 0;
+		padding : 0;
+	}
+	
+	#center ::-webkit-scrollbar-track, #left::-webkit-scrollbar-track{
+		background-color : #f0f0f0;
+	}
+	
+	#center ::-webkit-scrollbar, #left::-webkit-scrollbar{
+		width : 5px;
+	}
+	
+	#center ::-webkit-scrollbar-thumb, #left::-webkit-scrollbar-thumb{
+    	background : #C9C9C9;
+	}
+	
+	/* a태그 */
+	a:hover, a:link, a:visited{
+		text-decoration : none;
+		color : black;
+	}
+	
+	a:hover{
+		color : gray;
+		cursor : pointer;
+	}
+	
+	/* 두번째 줄 검색창 */
+	#bar{
+		width : 100%;
+		height : 80px;
+		line-height : 80px;
+	}
+	
+	#bar *{
+		color : white;
+	}
+	
+	#search_bar{
+		height : 80px;
+	}
+	
+	#search_bar *{
+		font-size : 17px;
+		margin-left : 240px;
+	}
+	
+	/* 왼쪽 상세검색 */
+	.leftTop{
+		width : 200px;
+		height : 100%;
+		position : absolute;
+		z-index : 1000;
+		top : 115px;
+		left : 0;
+		background-color : white;
+		overflow-x : hidden;
+		border-right : 1px solid #D5D5D5;
+	}
+	
+	#left>ul>li>ul{
+		padding : 10px 0 0 25px;
+	}
+	
+	/*#left>ul>li>ul>li{
+		padding : 0 0 5px 0;
+	}*/
+	
+	.card>ul>li>label{
+		font-size : 13px;
+		cursor : pointer;
+	}
+	
+	#v2>li{
+		float : left;
+		width : 55px;
+	}
+	
+	.left_down{
+		float : right;
+	}
+	
+	/* 중앙 상세검색 */
+	#center{
+		padding : 50px 0px 0px 0px;
+		width : 1140px;
+	}
+	
+	#center>div{
+		float : left;
+	}
+	
+	#detailed_search{
+		width : 1140px;
+		height : 424px;
+	}
+	
+	#detailed_search ul{
+		list-style : none;
+		margin : 0;
+		padding : 0;
+		float : left;
+		text-align : center;
+	}
+	
+	#detailed_search_above, #detailed_search_above{
+		width : 1140px;
+		height : 212px;
+	}
+	
+	#derailed_search_title>ul>li:nth-of-type(2) ~ li, #derailed_search_title_2>ul>li{
+		height : 42px;
+		line-height : 42px;
+	}
+	
+	#derailed_search_title span{
+		float : right;
+	}
+	
+	#derailed_search_title>ul, #derailed_search_title_2>ul{
+		width : 1140px;
+		height : 42px;
+	}
+	
+	#derailed_search_title li, #derailed_search_title_2 li{
+		border : 1px solid #D5D5D5;
+	}
+	
+	#derailed_search_title, #derailed_search_title_2{
+		width : 1140px;
+		height : 42px;
+	}
+	
+	#big_search, #big_search_2{
+		width : 1140px;
+		height : 170px;
+	}
+	
+	#big_search *, #big_search_2 *{
+		text-align : left;
+	}
+	
+	#big_search>ul, #big_search_2>ul{
+		padding : 10px;
+		border : 1px solid #D5D5D5;
+		width : 190px;
+		height : 170px;
+		overflow : auto;
+	}
+	
+	#big_search>ul>li, #big_search_2>ul>li{
+		width : 190px;
+	}
+	
+	#big_search>ul>li>label, #big_search_2>ul>li>label{
+		font-size : 13px;
+		border : none;
+		background : white;
+	}
+	
+	#detailed_search input[type=checkbox]{
+		display : none;
+		cursor : pointer;
+	}
+	
+	#detailed_search label{
+		cursor : pointer;
+	}
+	
+	#nav{
+		border-radius : 0px;
+	}
+	
+	#job_search, #area_search{
+		position : absolute;
+		top : 251px;
+		width : 1140px;
+		height : 170px;
+		background : white;
+		z-index : 100;
+		border : 1px solid #D5D5D5;
+	}
+	
+	#age_btn, #gender_check{
+		float : right;
+		width : 50px;
+		height : 30px;
+		text-align : center;
+	}
+	
+	.nav-item>a:link{
+		border : none;
+	}
+	
+	#search_content *{
+		font-size : 13px;
+	}
+	
+	#search_content ul, #search_content li{
+		overflow : auto;
+	}
+	
+	#search_content ul{
+		padding : 10px;
+	}
+	
+	#job_search div, #area_search div{
+		float : left;
+	}
+	
+	#job_search_big, #area_search_big{
+		width : 380px;
+		height : 170px;
+		border-right : 1px solid #D5D5D5;
+	}
+	
+	#job_search_big ul, #area_search_big ul{
+		width : 380px;
+		height : 168px;
+		overflow : auto;
+	}
+	
+	#job_search_big li, #area_search_big li{
+		border : none;
+		float : left;
+		text-align : left;
+	}
+	
+	#job_search_big li{
+		width : 170px;
+	}
+	
+	#area_search_big li{
+		width : 110px;
+	}
+	
+	#job_search_unit, #job_search_unit_ul, #area_search_unit, #area_search_unit_ul{
+		width : 758px;
+		height : 170px;
+	}
+	
+	#job_search_unit li, #area_search_unit li{
+		float : left;
+		width : 236px;
+		border : none;
+	}
+	
+	#job_search_unit li label, #area_search_unit li label{
+		float : left;
+	}
+	
+	/* 태그 검색 */
+	#tag_search{
+		width : 1140px;
+		height : 160px;
+		border : 1px solid #D5D5D5;
+		float : left;
+	}
+	
+	#tag_search ul, #tag_search li{
+		list-style : none;
+		margin : 0;
+		padding : 0;
+		float : left;
+		text-align : center;
+	}
+	
+	#tag_search button{
+		font-size : 13px;
+	}
+	
+	#tag .btn-primary{
+		/*background : white;
+		color : #3399FF;*/
+	}
+	
+	#tag_search div{
+		float : left;
+	}
+	
+	#tags{
+		width : 800px;
+		height : 160px;
+		padding : 10px;
+		overflow : auto;
+	}
+	
+	#tags>ul>li{
+		margin : 5px;
+	}
+	
+	#tag_reset{
+		width : 130px;
+		height : 160px;
+		line-height : 160px;
+		padding-left : 30px;
+	}
+	
+	#tag_reset>.btn-primary{
+		background : white;
+		color : #3399FF;
+	}
+	
+	#tag_search_div{
+		width : 208px;
+		height : 160px;
+		line-height : 160px;
+	}
+	
+	#tag_search_btn{
+		width : 180px;
+		height : 50px;
+	}
+	
+	/* 채용공고 */
+	#reImg{
+		width : 1140px;
+		height : 400px;
+		margin : 30px 0;
+	}
+	
+	#reImg *{
+		float : left;
+	}
+	
+	#reImg li{
+		width : 228px;
+		height : 200px;
+		margin : 1px;
+	}
+	
+	#reImg a{
+		width : 226px;
+		height : 198px;
+	}
+	
+	.slideLogo{
+		width : 226px;
+		height : 100px;
+		margin-bottom : 10px;
+	}
+	
+	.slideLogo>img{
+		width : 158px;
+		height : 100px;
+		margin : 0 34px;
+	}
+	
+	#reImg strong, #reImg a>span:nth-of-type(2){
+		width : 226px;
+		padding : 2px 20px 0 20px;
+	}
+	
+	/* 인재 */
+	#tpImg{
+		width : 1140px;
+		height : 400px;
+		margin : 30px 0;
+	}
+	
+	#tpImg *{
+		float : left;
+	}
+	
+	#tpImg li{
+		width : 285px;
+		height : 200px;
+		margin : 1px;
+	}
+	
+	#tpImg a{
+		width : 283px;
+		height : 198px;
+		padding : 20px;
+	}
+	
+	#tpImg a>div{
+		float : left;
+	}
+	
+	#userInfo{
+		width : 243px;
+		height : 58px;
+	}
+	
+	#tpLogo, .tpLogo img{
+		width : 58px;
+		height : 58px;
+	}
+	
+	.tpLogo img{
+		border-radius : 58px;
+		margin-right : 15px;
+		border : 1px solid #D5D5D5;
+	}
+	
+	.tpName{
+		font-size : 16px;
+		font-weight : bold;
+		margin-right : 5px;
+	}
+	
+	.tpAge{
+		height : 25px;
+		font-size : 13px;
+	}
+	
+	.tpCareer{
+		width : 100px;
+	}
+	
+	.tpTitle{
+		width : 243px;
+		height : 48px;
+		margin : 18px 0;
+		font-weight : bold;
+		font-size : 17px;
+	}
+	
+	.tpJob{
+		font-size : 13px;
+		color : #ABABAB;
+	}
+	
+	/* 채용공고 검색된 목록들 */
+	#list{
+		float : left;
+		width : 1140px;
+	}
+	
+	#search_solt{
+		width : 1140px;
+		height : 40px;
+	}
+	
+	#search_solt div{
+		float : left;
+	}
+	
+	#solt_div, #solt{
+		width : 150px;
+		height : 40px;
+	}
+	
+	#solt_searchText, #solt{
+		padding : 5px;
+	}
+	
+	#solt_searchText_div, #solt_searchText{
+		width : 200px;
+		height : 40px;
+	}
+	
+	#solt_searchBtn_div, #solt_searchBtn{
+		width : 60px;
+		height : 40px;
+	}
+	
+	#search_list{
+		width : 1140px;
+	}
+	
+	.row{
+		float : left;
+		width : 1140px;
+		height : 150px;
+		border : 1px solid #D5D5D5;
+		margin : 1px;
+	}
+	
+	#paging{
+		float : left;
+		margin : 0 auto;
+		padding : 20px 0px;
+	}
+	
+	/* 인재 검색된 목록들 */
+	.search_tpName{
+		font-weight : bold;
+		font-size : 17px;
+	}
+	
+	.search_tpInfo{
+		float : left;
+		width : 175px;
+		height : 30px;
+		font-size : 13px;
+	}
+	
+	/* 프로젝트 검색 */
+	#workPeriod li{
+		float : left;
+		height : 26.5px;
+	}
+	
+	#personnel div{
+		float : left;
+		width : 80px;
+	}
+	
+	#big_search *, #big_search_2 *{
+		font-size : 13px;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

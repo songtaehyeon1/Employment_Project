@@ -1,0 +1,188 @@
+#customModalSize {
+	width: 800px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, 0%);
+}
+
+#myModal>button {
+	background: none;
+	border: 0 none;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	position: absolute;
+	height: 72px;
+	font-size: 32px;
+	letter-spacing: -1.5px;
+	padding: 0 26px;
+	right: 50px;
+	bottom: 50px;
+	border-radius: 4px
+}
+
+#banner {
+	background-image: url(/itzProject/img/WorkTogether.png);
+	background-size:contain;
+	background-repeat:no-repeat;
+	text-align:right;
+}
+
+#order_start {
+	position: absolute;
+	height: 72px;
+	font-size: 32px;
+	letter-spacing: -1.5px;
+	padding: 0 26px;
+	right: 50px;
+	bottom: 50px;
+	border-radius: 4px
+}
+
+#close {
+	position: absolute;
+	right: 40px;
+	top: 10px
+}
+
+textarea {
+	display: inline-block;
+	width: 80%;
+	height: 300px;
+	border-radius: 4px;
+	border: 1px solid #eaeaea;
+	background-color: #fff;
+	font-size: 19px;
+	line-height: 1.37;
+	letter-spacing: -0.9px;
+	resize: none;
+	color: #666;
+	padding: 20px 20px;
+}
+
+.percent_spot {
+	display: inline-block;
+	background-color: #18aebf;
+	font-size: 12px;
+	letter-spacing: -0.6px;
+	color: #fff;
+	padding-top: 5px;
+	position: absolute;
+	width: 66px;
+	height: 24px;
+	border-radius: 12px;
+	top: 0px;
+	right: -33px;
+	text-align: center;
+	margin-top: -32px;
+	position: absolute;
+}
+
+.percent_spot:before {
+	content: '';
+	position: absolute;
+	border-top: 7px solid #18aebf;
+	border-right: 6px solid transparent;
+	border-left: 6px solid transparent;
+	bottom: -6px;
+	left: 27px
+}
+
+.orderpages {
+	display: none;
+	text-align: center;
+}
+
+.pre_page {
+	position: absolute;
+	left: 10px;
+	bottom: 10px;
+}
+
+#customModalSize {
+	border-radius: 30px;
+	overflow: hidden
+}
+
+.answer {
+	position: relative;
+	text-align: center;
+}
+
+.answer_radio {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	font-size: 17px;
+	color: #666;
+	text-align: left;
+	padding: 20px 25px 20px 25px;
+	float: left;
+	border: 1px solid gray;
+	border-radius: 10px;
+	margin: 10px;
+	width: 30%;
+}
+
+.radiomark {
+	position: absolute;
+	left: 0;
+	top: 0;
+	cursor: pointer;
+	width: 100%;
+	margin: 0;
+	height: 100%;
+}
+
+.gj-datepicker {
+	margin: 0 auto;
+	text-align: center;
+}
+
+.checkbox_custom {
+	font-size: 25px;
+	padding: 10px
+}
+
+.percent_bar {
+	position: relative;
+	width: 0%;
+	height: 30px;
+	background-color: pink;
+}
+
+#percentBar_wrap {
+	position: absolute;
+	top: 35px;
+	margin: 0 auto;
+	z-index: 20;
+	width: 80%;
+	height: 30px;
+	background-color: lightblue;
+	margin-left: 10%;
+}
+
+option[value=""][disabled] {
+	display: none;
+}
+
+h1 {
+	float: left;
+	width: 100%
+}
+.jumbotron {
+	background: #4CA1AF; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #C4E0E5, #4CA1AF);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #C4E0E5, #4CA1AF);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	color:white;
+}
+#mainTag{
+	background-image: url(/itzProject/img/WorkTogether.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 400px;
+    background-position-x: 80%;
+}

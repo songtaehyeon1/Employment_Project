@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+.nav-item {
+	font-size: 1.3em;
+	line-height: 30px;
+	margin: 0px 50px;
+}
+*{
+	font-family: "맑은 고딕"
+}
+
+#logo {
+	font-size: 3em
+}
+#recomand img{
+	width:130px;
+	height: 60px;
+	
+}
+div[name='companys'] img{
+	width:130px;
+	height: 60px;
+}
+#accordion {
+	height: 600px
+}
+ul,li{
+	list-style-type: none;
+	margin:0;
+}
+#dashboard {
+	overflow: hidden
+}
+
+#activity_list {
+	padding: 0px 30px;
+	list-style-type: none;
+}
+
+#activity_list>li {
+	width: 250px;
+	height: 150px;
+	text-align: center;
+}
+
+#activity_list>li>a:hover {
+	text-decoration: none;
+}
+
+#progressbar {
+	trastion-duration: 2s
+}
+
+#certificateinfo, #careerdescriptioninfo, #portfolioinfo, #selfintroinfo
+	{
+	display: none;
+}
+
+.input_title {
+	width: 160px;
+	height: 40px;
+	padding: 5px 30px;
+	white-space: nowrap;
+	overflow: visible;
+	text-overflow: ellipsis;
+
+}
+
+.input_text {
+	width: 357px;
+	height: 40px
+}
+
+.input_text2 {
+	width: 600px;
+	height: 40px;
+	margin-top: 5px;
+	margin-left: 160px;
+}
+#qaz *{
+	float:left;
+	
+}
+#recruit_content *{
+	float:left;
+
+}
+#customModalSize{width:1000px;left:50%;transform: translate(-50%, 0%);}
+.input_text3 {
+	padding: 5px 30px;
+	width: 140px;
+	height: 40px;
+}
+
+.input_date {
+	width: 100px;
+	height: 40px;
+}
+#job_search{
+	position: relative;
+	display: none;
+}
+#gender_law{
+	transition-duration:2s;
+}
+.sexlbl {
+	width: 70px;
+	border: 1px lightblue solid;
+	text-align: center;
+	height: 40px;
+	padding: 5px 10px;
+	margin: 0;
+}
+#permanentinfo,#contractinfo,#interninfo,#dispatchinfo,#armyinfo,#homepageinfo,#faxinfo{
+	display: none;
+	height:60px;
+}
+#male, #female {
+	display: none
+}
+
+#picture {
+	position: relative;
+	float: right;
+	width: 100px;
+	height: 140px;
+	margin-right: 70px;
+	border: 1px solid gray
+}
+
+#picdel {
+	position: absolute;
+	float: right;
+	margin-left: -25px
+}
+
+#noPic, #addPic {
+	width: 100px;
+	height: 140px;
+}

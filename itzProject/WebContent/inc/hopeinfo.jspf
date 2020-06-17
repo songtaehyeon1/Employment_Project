@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html>
+<body>
+	<div id="hopeinfo">
+		<h3>이력서 공개 범위 설정</h3>
+		<hr />
+		<ul class="d-flex justify-content-between"
+			style="list-style-type: none; height: 255px">
+			<li class="round-lg bg-light" style="height: 255px; width: 303px">
+				<div class="card" style="height: 250px; width: 300px">
+					<div class="card-header">
+						<input type="radio" name="opentype" value="2" checked>인재정보 검색 + 추천인재 공개
+					</div>
+					<div class="card-body">인재 정보 검색을 통해 회원님이 인사담당자로부터 먼저 면접 제의 를
+						받을 수 있습니다. 채용정보에 매칭되는 이력서가 있을 경우, 해당 기업 인사담당자에게 회원님이 추천 됩니다</div>
+				</div>
+			</li>
+			<li class="round-lg bg-light" style="height: 255px; width: 303px">
+				<div class="card" style="height: 250px; width: 300px">
+					<div class="card-header">
+						<input type="radio" name="opentype" value="1">추천인재 공개
+					</div>
+					<div class="card-body">인재정보검색에는 이력서를 비공개하고 추천인재에만 공개할 수 있습니다.
+						채용정보에 매칭되는 이력서가 있을 경우, 해당 기업 인사담당자에게 회원님 이 추천 됩니다.</div>
+				</div>
+			</li>
+			<li class="round-lg bg-light" style="height: 255px; width: 303px">
+				<div class="card" style="height: 250px; width: 300px">
+					<div class="card-header">
+						<input type="radio" name="opentype" value="0">비공개
+					</div>
+					<div class="card-body">이력서가 인재검색 및 추천인재에 비공개 되며, 기업 인사담당자에게
+						입사제의 및 면접제의를 받을 수 없습니다. 이력서를 비공개한 후 입사지원 하여도 인사담당자가 이력서를 열람할 수
+						있습니다.</div>
+				</div>
+			</li>
+
+		</ul>
+	</div>
+</body>
+</html>

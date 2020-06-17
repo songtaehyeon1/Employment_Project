@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+ul, li {
+	list-style-type: none;
+	text-decoration: none;
+	float: left;
+	margin: 0px;
+	padding: 0px;
+}
+
+.title {
+	color: #2b2a2a;
+	font-weight: 500;
+	background-color: #f9f9f9;
+	padding: 17px 10px;
+	float: left;
+	width: 136.5px;
+	height: 60px
+}
+
+.content {
+	padding: 17px 10px;
+	float: left;
+	height: 60px
+}
+
+.info {
+	margin: 20px 0;
+	border: 1px solid gray
+}
+
+.borderGray {
+	border: 1px solid gray;
+}
+.nopadding{
+	padding-left:0px;
+	padding-right:0px;
+}
+
+#companyInfo input[type=checkbox] {
+	padding: 0 10px
+}
+
+#companyInfo li {
+	border-bottom: 1px solid gray;
+}
+
+#companyInfo label {
+	margin-right: 5px;
+}
+
+#companyInfo ul {
+	border: 1px solid gray
+}
