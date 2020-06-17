@@ -4,7 +4,7 @@
 
 <style>
 table{
-	width:100%
+	width:100%;
 }
 #orderForm {
 	font-family: Nanum Gothic, "나눔고딕"
